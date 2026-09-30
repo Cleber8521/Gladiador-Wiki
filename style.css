@@ -1,0 +1,329 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #05070b;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+    text-align: center;
+    padding: 35px 20px;
+    border-bottom: 1px solid #1d2b3a;
+    background: #080d14;
+}
+
+header h1 {
+    font-size: 38px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #8ea0b4;
+    font-size: 16px;
+}
+
+
+/* =========================
+   MENU PRINCIPAL
+========================= */
+
+.menu-principal {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: #070b11;
+}
+
+.menu-principal button,
+.fases-menu button {
+    border: 1px solid #30465e;
+    background: #101923;
+    color: white;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.menu-principal button:hover,
+.fases-menu button:hover {
+    background: #182838;
+    border-color: #4b9cff;
+}
+
+
+/* =========================
+   PÁGINAS
+========================= */
+
+.pagina {
+    display: none;
+}
+
+.pagina.ativa {
+    display: block;
+}
+
+
+/* =========================
+   PERSONAGENS
+========================= */
+
+.selecao {
+    width: min(1200px, 92%);
+    margin: 40px auto;
+}
+
+
+/* Personagem principal */
+
+.destaque {
+    display: grid;
+    grid-template-columns: 45% 55%;
+    min-height: 480px;
+    background: #0a1018;
+    border: 1px solid #1e3043;
+    overflow: hidden;
+}
+
+
+.destaque > img {
+    width: 100%;
+    height: 480px;
+    object-fit: contain;
+    background: #06090e;
+    display: block;
+}
+
+
+/* Informações */
+
+.informacoes {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.informacoes span {
+    color: #4b9cff;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.informacoes h2 {
+    font-size: 42px;
+    margin: 10px 0 20px;
+}
+
+.informacoes p {
+    color: #b6c1ce;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.card {
+    background: #0b121b;
+    border: 1px solid #1e3043;
+    cursor: pointer;
+    transition: 0.2s;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #4b9cff;
+}
+
+.card.ativo {
+    border-color: #4b9cff;
+    box-shadow: 0 0 15px rgba(75, 156, 255, 0.2);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    background: #06090e;
+}
+
+.card h3 {
+    padding: 14px;
+    font-size: 15px;
+}
+
+
+/* =========================
+   BOTÃO FASES
+========================= */
+
+.botao-fases {
+    display: block;
+    margin: 30px auto 0;
+    padding: 15px 30px;
+    border: 1px solid #4b9cff;
+    background: #0e1a28;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.botao-fases:hover {
+    background: #162b42;
+}
+
+
+/* =========================
+   FASES
+========================= */
+
+.fases-container {
+    width: min(1200px, 92%);
+    margin: 40px auto;
+}
+
+.fases-container > h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 25px;
+}
+
+
+/* Menu das fases */
+
+.fases-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+
+/* Conteúdo */
+
+.fase-conteudo {
+    display: none;
+    background: #0a1018;
+    border: 1px solid #1e3043;
+    padding: 35px;
+}
+
+.fase-conteudo.ativa {
+    display: block;
+}
+
+.fase-conteudo h2 {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.fase-conteudo > p {
+    color: #b6c1ce;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    border-top: 1px solid #1d2b3a;
+    color: #718094;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 900px) {
+
+    .destaque {
+        grid-template-columns: 1fr;
+    }
+
+    .destaque > img {
+        height: 400px;
+    }
+
+    .informacoes {
+        padding: 30px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    .menu-principal {
+        flex-direction: column;
+    }
+
+    .menu-principal button {
+        width: 100%;
+    }
+
+    .destaque > img {
+        height: 300px;
+    }
+
+    .informacoes h2 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .fase-conteudo {
+        padding: 20px;
+    }
+
+}

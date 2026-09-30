@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gladiador Wiki</title>
+
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>PLANETA DOS GLADIADORES</h1>
+        <p>Conheça os personagens e a história da saga</p>
+    </header>
+
+    <nav class="menu-principal">
+        <button onclick="abrirPagina('personagens')">
+            PERSONAGENS
+        </button>
+
+        <button onclick="abrirPagina('fases')">
+            FASES DA SAGA
+        </button>
+    </nav>
+
+
+    <!-- ========================= -->
+    <!-- PÁGINA DE PERSONAGENS -->
+    <!-- ========================= -->
+
+    <main id="personagens" class="pagina ativa">
+
+        <section class="selecao">
+
+            <div class="destaque">
+
+                <img
+                    id="imagemPrincipal"
+                    src="./assets/Icon.jpg"
+                    alt="Personagem"
+                >
+
+                <div class="informacoes">
+
+                    <span id="fasePersonagem">
+                        FASE 1
+                    </span>
+
+                    <span id="categoria">
+                        GLADIADOR
+                    </span>
+
+                    <h2 id="nome">
+                        Gladiador Rei
+                    </h2>
+
+                    <p id="descricao">
+                        Conheça o personagem selecionado.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CARDS DOS PERSONAGENS -->
+
+            <div class="cards">
+
+                <div
+                    class="card ativo"
+                    onclick="selecionar('rei', this)"
+                >
+                    <img
+                        src="./assets/Rei Gladiador.png"
+                        alt="Rei Gladiador"
+                    >
+
+                    <h3>Rei Gladiador</h3>
+                </div>
+
+
+                <div
+                    class="card"
+                    onclick="selecionar('thour', this)"
+                >
+                    <img
+                        src="./assets/Gladiator.jpg"
+                        alt="Thour"
+                    >
+
+                    <h3>O Gladiador</h3>
+                </div>
+
+
+                <div
+                    class="card"
+                    onclick="selecionar('gemeos', this)"
+                >
+                    <img
+                        src="./assets/Gêmeo 1.png"
+                        alt="Gêmeos"
+                    >
+
+                    <h3>Os Gêmeos</h3>
+                </div>
+
+
+                <div
+                    class="card"
+                    onclick="selecionar('tryton', this)"
+                >
+                    <img
+                        src="./assets/Tryton.png"
+                        alt="Tryton"
+                    >
+
+                    <h3>Tryton</h3>
+                </div>
+
+
+                <div
+                    class="card"
+                    onclick="selecionar('magnar', this)"
+                >
+                    <img
+                        src="./assets/Magnar.png"
+                        alt="Magnar"
+                    >
+
+                    <h3>Magnar</h3>
+                </div>
+
+
+                <div
+                    class="card"
+                    onclick="selecionar('hammer', this)"
+                >
+                    <img
+                        src="./assets/Hammer Strike.jpg"
+                        alt="Hammer Strike"
+                    >
+
+                    <h3>Hammer Strike</h3>
+                </div>
+
+
+                <div
+                    class="card"
+                    onclick="selecionar('gryder', this)"
+                >
+                    <img
+                        src="./assets/Gryder.png"
+                        alt="Gryder"
+                    >
+
+                    <h3>Gryder</h3>
+                </div>
+
+
+                <div
+                    class="card"
+                    onclick="selecionar('destroyer', this)"
+                >
+                    <img
+                        src="./assets/Destroyer.jpg"
+                        alt="Destroyer"
+                    >
+
+                    <h3>Destroyer</h3>
+                </div>
+
+            </div>
+
+
+            <button
+                class="botao-fases"
+                onclick="abrirPagina('fases')"
+            >
+                VER FASES DA SAGA
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ========================= -->
+    <!-- PÁGINA DAS FASES -->
+    <!-- ========================= -->
+
+    <main id="fases" class="pagina">
+
+        <section class="fases-container">
+
+            <h2>FASES DA SAGA</h2>
+
+            <div class="fases-menu">
+
+                <button onclick="mostrarFases(1)">
+                    FASE 1
+                </button>
+
+                <button onclick="mostrarFases(2)">
+                    FASE 2
+                </button>
+
+                <button onclick="mostrarFases(3)">
+                    FASE 3
+                </button>
+
+                <button onclick="mostrarFases(4)">
+                    FASE 4
+                </button>
+
+                <button onclick="mostrarFases(5)">
+                    FASE 5
+                </button>
+
+            </div>
+
+
+            <!-- FASE 1 -->
+
+            <div id="fase1" class="fase-conteudo ativa">
+
+                <h2>FASE 1</h2>
+
+                <p>
+                    A primeira fase apresenta o Rei Gladiador,
+                    Thour, os Gêmeos e Tryton, dando início à
+                    história do Planeta dos Gladiadores e à
+                    chegada das Pedras do Poder à Terra.
+                </p>
+
+                <div class="cards">
+
+                    <div
+                        class="card"
+                        onclick="selecionar('rei', this)"
+                    >
+                        <img src="./assets/Rei Gladiador.png">
+                        <h3>Rei Gladiador</h3>
+                    </div>
+
+                    <div
+                        class="card"
+                        onclick="selecionar('thour', this)"
+                    >
+                        <img src="./assets/Gladiator.jpg">
+                        <h3>O Gladiador</h3>
+                    </div>
+
+                    <div
+                        class="card"
+                        onclick="selecionar('gemeos', this)"
+                    >
+                        <img src="./assets/Gêmeo 1.png">
+                        <h3>Os Gêmeos</h3>
+                    </div>
+
+                    <div
+                        class="card"
+                        onclick="selecionar('tryton', this)"
+                    >
+                        <img src="./assets/Tryton.png">
+                        <h3>Tryton</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FASE 2 -->
+
+            <div id="fase2" class="fase-conteudo">
+
+                <h2>FASE 2</h2>
+
+                <p>
+                    Após os acontecimentos da primeira fase,
+                    os governos passam a desenvolver novas
+                    ameaças para enfrentar o Gladiador.
+                </p>
+
+                <div class="cards">
+
+                    <div
+                        class="card"
+                        onclick="selecionar('magnar', this)"
+                    >
+                        <img src="./assets/Magnar.png">
+                        <h3>Magnar</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FASE 3 -->
+
+            <div id="fase3" class="fase-conteudo">
+
+                <h2>FASE 3</h2>
+
+                <p>
+                    O governo cria uma armadura baseada na
+                    tecnologia do Gladiador, dando origem ao
+                    Hammer Strike.
+                </p>
+
+                <div class="cards">
+
+                    <div
+                        class="card"
+                        onclick="selecionar('hammer', this)"
+                    >
+                        <img src="./assets/Hammer Strike.jpg">
+                        <h3>Hammer Strike</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FASE 4 -->
+
+            <div id="fase4" class="fase-conteudo">
+
+                <h2>FASE 4</h2>
+
+                <p>
+                    Gryder é escolhido pelo Conselho dos
+                    Gladiadores para descobrir o que aconteceu
+                    com o Rei Gladiador.
+                </p>
+
+                <div class="cards">
+
+                    <div
+                        class="card"
+                        onclick="selecionar('gryder', this)"
+                    >
+                        <img src="./assets/Gryder.png">
+                        <h3>Gryder</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- FASE 5 -->
+
+            <div id="fase5" class="fase-conteudo">
+
+                <h2>FASE 5</h2>
+
+                <p>
+                    Destroyer assume o controle do Planeta dos
+                    Gladiadores e transforma a cultura de combate
+                    em uma ferramenta de poder e conquista.
+                </p>
+
+                <div class="cards">
+
+                    <div
+                        class="card"
+                        onclick="selecionar('destroyer', this)"
+                    >
+                        <img src="./assets/Destroyer.jpg">
+                        <h3>Destroyer</h3>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>
+            © CLEBER STUDIO
+        </p>
+    </footer>
+
+
+    <!-- ========================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ========================= -->
+
+    <script>
+
+        const personagens = {
+
+            rei: {
+                nome: "Gladiador Rei",
+                categoria: "REI GLADIADOR",
+                fase: "FASE 1",
+                imagem: "./assets/Rei Gladiador.png",
+                descricao:
+                    "Azul, alto e experiente em combate, o Rei Gladiador é aquele em quem a população do planeta dos gladiadores confia. Foi por seu esforço e senso de justiça que conquistou o trono do planeta e levou seu povo a um caminho melhor."
+            },
+
+
+            thour: {
+                nome: "O Gladiador",
+                categoria: "GLADIADOR DA TERRA",
+                fase: "FASE 1",
+                imagem: "./assets/Gladiator.jpg",
+                descricao:
+                    "Thour é um humano escolhido pelo Rei Gladiador para receber seus poderes e sua tecnologia. Mesmo sem ter direito ao trono do planeta, ele decide continuar o legado do Rei e proteger as pessoas."
+            },
+
+
+            gemeos: {
+                nome: "Os Gêmeos",
+                categoria: "INVASORES",
+                fase: "FASE 1",
+                imagem: "./assets/Gêmeo 1.png",
+                descricao:
+                    "Dois irmãos alienígenas extremamente inteligentes que invadiram o planeta dos Gladiadores para roubar as Pedras do Poder e obter a tecnologia da armadura Gladiadora."
+            },
+
+
+            tryton: {
+                nome: "Tryton",
+                categoria: "INTELIGÊNCIA ARTIFICIAL",
+                fase: "FASE 1",
+                imagem: "./assets/Tryton.png",
+                descricao:
+                    "Uma inteligência artificial criada para auxiliar Thour, mas que se rebela e cria seu próprio corpo. Tryton usa a tecnologia da cidade e uma Pedra do Poder para conquistar liberdade e controlar máquinas."
+            },
+
+
+            magnar: {
+                nome: "Magnar",
+                categoria: "CAÇADOR",
+                fase: "FASE 2",
+                imagem: "./assets/Magnar.png",
+                descricao:
+                    "Uma criação humana desenvolvida especificamente para caçar e aniquilar o Gladiador da Terra. Magnar foi construído depois de os humanos estudarem os poderes, habilidades e comportamento de Thour."
+            },
+
+
+            hammer: {
+                nome: "Hammer Strike",
+                categoria: "ARMADURA",
+                fase: "FASE 3",
+                imagem: "./assets/Hammer Strike.jpg",
+                descricao:
+                    "Paulie é um dos melhores militares do governo e foi escolhido para pilotar uma armadura criada com base na tecnologia do Gladiador. Depois de ser abandonado pelo Exército, ele rouba a armadura e passa a agir por conta própria."
+            },
+
+
+            gryder: {
+                nome: "Gryder",
+                categoria: "GLADIADOR",
+                fase: "FASE 4",
+                imagem: "./assets/Gryder.png",
+                descricao:
+                    "Escolhido pelo Conselho dos Gladiadores para liderar a busca pelo Rei Gladiador, Gryder descobre que a missão possui interesses políticos maiores e decide ajudar Thour."
+            },
+
+
+            destroyer: {
+                nome: "Destroyer",
+                categoria: "REI DOS GLADIADORES",
+                fase: "FASE 5",
+                imagem: "./assets/Destroyer.jpg",
+                descricao:
+                    "O antigo governante temporário assume o poder por meio de um golpe e transforma o Planeta dos Gladiadores em uma ditadura. Seu objetivo é expandir o domínio dos Gladiadores e conquistar outros mundos."
+            }
+
+        };
+
+
+        /* =========================
+           SELECIONAR PERSONAGEM
+        ========================= */
+
+        function selecionar(id, elemento = null) {
+
+            const personagem = personagens[id];
+
+            if (!personagem) {
+                return;
+            }
+
+            const imagemPrincipal =
+                document.getElementById("imagemPrincipal");
+
+            imagemPrincipal.src =
+                personagem.imagem;
+
+            imagemPrincipal.alt =
+                personagem.nome;
+
+            document.getElementById("nome").textContent =
+                personagem.nome;
+
+            document.getElementById("categoria").textContent =
+                personagem.categoria;
+
+            document.getElementById("fasePersonagem").textContent =
+                personagem.fase;
+
+            document.getElementById("descricao").textContent =
+                personagem.descricao;
+
+
+            document
+                .querySelectorAll(".card")
+                .forEach(card => {
+
+                    card.classList.remove("ativo");
+
+                });
+
+
+            if (elemento) {
+
+                elemento.classList.add("ativo");
+
+            }
+
+
+            abrirPagina("personagens");
+
+
+            window.scrollTo({
+
+                top: 0,
+                behavior: "smooth"
+
+            });
+
+        }
+
+
+        /* =========================
+           TROCAR PÁGINA
+        ========================= */
+
+        function abrirPagina(pagina) {
+
+            document
+                .querySelectorAll(".pagina")
+                .forEach(elemento => {
+
+                    elemento.classList.remove("ativa");
+
+                });
+
+
+            document
+                .getElementById(pagina)
+                .classList.add("ativa");
+
+        }
+
+
+        /* =========================
+           TROCAR FASE
+        ========================= */
+
+        function mostrarFases(numero) {
+
+            document
+                .querySelectorAll(".fase-conteudo")
+                .forEach(fase => {
+
+                    fase.classList.remove("ativa");
+
+                });
+
+
+            const fase =
+                document.getElementById(
+                    "fase" + numero
+                );
+
+
+            if (fase) {
+
+                fase.classList.add("ativa");
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
